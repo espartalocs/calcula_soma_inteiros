@@ -12,7 +12,7 @@ class HomeController extends GetxController {
     campoVisivel.value = true;
     valores.clear();
     int soma = 0;
-    for (int i = 0; i < numero; i++) {
+    for (int i = 0; i <= numero; i++) {
       if (i % 3 == 0 || i % 5 == 0) {
         soma = soma + i;
         valores.addIf(i != 0, i);
