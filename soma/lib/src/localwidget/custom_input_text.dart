@@ -24,6 +24,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
         inputFormatters: widget.inputFormater,
         keyboardType: TextInputType.number,
         obscureText: isObscure,
+        validator: (value) {
+          if (value == null || value == '') {
+            return 'Informe o campo';
+          }
+          return null;
+        },
         decoration: InputDecoration(
           labelText: widget.label,
           isDense: true,
